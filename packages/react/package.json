@@ -1,0 +1,7 @@
+{
+  "name": "@jvano-ds/react",
+  "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "@jvano-ds/foundation": "workspace:^"
+  }
+}
