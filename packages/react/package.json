@@ -1,7 +1,13 @@
 {
   "name": "@jvano-ds/react",
   "packageManager": "yarn@3.3.1",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "@jvano-ds/foundation": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "4.9.4"
   }
 }
