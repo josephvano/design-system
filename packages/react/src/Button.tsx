@@ -1,21 +1,21 @@
-import React, {forwardRef} from 'react'
+import { forwardRef } from 'react';
 
-interface ButtonProps extends React.ComponentProps<'button'> {
-  /** If button is in disabled state **/
+export interface ButtonProps extends React.ComponentProps<'button'> {
+  /** If button is in disabled state */
   disabled?: boolean;
-  /** Loading state **/
+  /** Loading state */
   loading?: boolean;
+
+  /** Sweetness */
+  name: string;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({disabled, loading, ...rest}, ref) => {
-    return (
-      <button ref={ref} {...rest} disabled={disabled || loading}/>
-    )
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ name, disabled, loading, color = 'primary', ...rest }, ref) => {
+    return <button {...rest} ref={ref} disabled={disabled || loading} />;
   }
 );
 
-Button.displayName = "Button";
-
+Button.displayName = 'Button';
 
 export default Button;

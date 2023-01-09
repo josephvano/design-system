@@ -1,6 +1,6 @@
-import React, {forwardRef} from 'react'
+import React, { forwardRef } from 'react';
 
-interface IconButtonProps extends React.ComponentProps<'button'> {
+export interface IconButtonProps extends React.ComponentProps<'button'> {
   /** If button is in disabled state **/
   disabled?: boolean;
   /** Loading state **/
@@ -11,16 +11,15 @@ interface IconButtonProps extends React.ComponentProps<'button'> {
 }
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({disabled, loading, ...rest}, ref) => {
+  ({ disabled, loading, ...rest }, ref) => {
     return (
       <button ref={ref} {...rest} disabled={disabled || loading}>
         {rest.children}
       </button>
-    )
+    );
   }
 );
 
-IconButton.displayName = "Button";
+IconButton.displayName = 'Button';
 
-
-export default IconButton;
+export { IconButton };
