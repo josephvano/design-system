@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 export interface IconButtonProps extends React.ComponentProps<'button'> {
   /** If button is in disabled state **/
@@ -10,7 +10,7 @@ export interface IconButtonProps extends React.ComponentProps<'button'> {
   'aria-label'?: string;
 }
 
-const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ disabled, loading, ...rest }, ref) => {
     return (
       <button ref={ref} {...rest} disabled={disabled || loading}>
@@ -20,6 +20,6 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   }
 );
 
-IconButton.displayName = 'Button';
+IconButton.displayName = 'IconButton';
 
-export { IconButton };
+export default IconButton;
